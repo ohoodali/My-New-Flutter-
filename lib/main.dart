@@ -76,25 +76,37 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                //forgot password screen
-              },
-              child: const Text('Forgot Password',),
+            Container(
+              child: TextButton(
+                onPressed: () {
+                  //forgot password screen
+                },
+                child: const Text('Forgot Password',),
+              ),
             ),
             Container(
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                  child: const Text('Login'),
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.redAccent, //background color of button
+                        side: BorderSide(width:3, color:Colors.brown), //border width and color
+                        elevation: 3, //elevation of button
+                        shape: RoundedRectangleBorder( //to set border radius to button
+                            borderRadius: BorderRadius.circular(30)
+                        ),
+                        padding: EdgeInsets.all(20) //content padding inside button
+                    ),
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                        return MyPage();
-                      }));
-
-                  },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MyPage()),
+                      );//code to execute when this button is pressed.
+                    },
+                    child: Text("Elevated Button")
                 )
-            ),
+            )
+
 
           ],
         ));

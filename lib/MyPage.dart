@@ -19,8 +19,13 @@ class MyPage extends StatelessWidget{
                 ),
               ),
             ),
+            Container(
+              height: 250,
 
-                 Image.network('https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'),
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child:   Image.network('https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'),
+            ),
+
             Container(
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
