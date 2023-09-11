@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled3/MyPage.dart';
+import 'package:untitled3/login.dart';
 
 void main() => runApp(const MyApp());
 
@@ -99,9 +100,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                     onPressed: (){
                       Navigator.push(
+
                         context,
-                        MaterialPageRoute(builder: (context) => MyPage()),
-                      );//code to execute when this button is pressed.
+                        MaterialPageRoute(builder: (context) =>LoginPage()
+                        ));//code to execute when this button is pressed.
                     },
                     child: Text("Elevated Button")
                 )
